@@ -25,10 +25,10 @@ on:
         required: true
         default: out/exported/
 
-       solution_folder:
+     solution_folder :
         description: 'staging the unpacked solution folder before check-in *do not change*'
         required: true
-        default: out/solutions/ 
+        default: out/exported/solutions/ 
 env:
 #edit your values here
   USER : 'admin@cicportaldemos.onmicrosoft.com'
