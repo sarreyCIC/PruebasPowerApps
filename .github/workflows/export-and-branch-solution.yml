@@ -25,7 +25,9 @@ on:
        default: solutions/
 env:
 #edit your values here
-  ENVIRONMENT_URL: 'https://devpwc-collaborate.crm4.dynamics.com'
+  USER : 'admin@cicportaldemos.onmicrosoft.com'
+  PASS : 'Cloud123!'
+  ENVIRONMENT_URL: 'devcicportaldemos.crm4.dynamics.com/'
   CLIENT_ID: '49d2e9c3-cb62-4f96-801a-7dacc4874cca'
   TENANT_ID: 'bb24ff0d-24a0-4146-851b-761c2ac27b24'
 
@@ -45,9 +47,9 @@ jobs:
       uses: microsoft/powerplatform-actions/who-am-i@0.4.0
       with:
         environment-url: ${{env.ENVIRONMENT_URL}}
-        app-id: ${{env.CLIENT_ID}}
-        client-secret: ${{ secrets.PowerPlatformSPN }}
-        tenant-id: ${{env.TENANT_ID}}
+        user-name: ${{env.USER}}
+        password-secret: ${{ env.PASS }}
+        
 
 
     - name: export-solution action
