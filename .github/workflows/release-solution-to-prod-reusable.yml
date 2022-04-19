@@ -4,23 +4,23 @@ name: release-solution-to-prod-reusable
 
 on:
   workflow_dispatch:
-    inputs: 
+     inputs: 
       #Do Not change these values
       #Values are set by the caller
       #caller sample: release-action-call.ymnl
-      solution_name :
+      solution_name:
         description: 'The solution name.'
         type: string
-        default: PruebaExportacion       
-      solution_shipping_folder :
+        default: ALMLab       
+      solution_shipping_folder:
         description: 'folder name for staging the exported solution *do not change*'        
         type: string
         default: out/ship/
-      solution_outbound_folder :
+      solution_outbound_folder:
         description: 'staging the unpacked solution folder before check-in *do not change*'
         type: string
         default: out/solutions/
-      solution_source_folder : 
+      solution_source_folder: 
        description: 'folder name to be created and checked in *do not change*'
        type: string
        default: solutions/
