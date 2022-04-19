@@ -58,9 +58,10 @@ jobs:
        password-secret : ${{ env.PASS }}
        solution-name : ${{ github.event.inputs.solution_name }}
        solution-output-file : ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
+       
     - name: unpack-solution action
-        uses: microsoft/powerplatform-actions/unpack-solution@0.4.0
-        with:
+      uses: microsoft/powerplatform-actions/unpack-solution@0.4.0
+      with:
           solution-file: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
           solution-folder: ${{ github.event.inputs.solution_folder}}/${{ github.event.inputs.solution_name }}
           solution-type: 'Unmanaged'
