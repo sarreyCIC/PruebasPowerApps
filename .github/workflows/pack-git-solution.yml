@@ -59,8 +59,8 @@ jobs:
         force-overwrite: true
         publish-changes: true
     - name: export-solution action
-          uses: microsoft/powerplatform-actions/export-solution@0.4.0
-          with:
+      uses: microsoft/powerplatform-actions/export-solution@0.4.0
+      with:
             environment-url: ${{env.ENVIRONMENT_URL}}
             user-name : ${{env.USER}}
             password-secret : ${{ env.PASS }}
