@@ -49,18 +49,7 @@ jobs:
         environment-url: ${{env.ENVIRONMENT_URL}}
         user-name: ${{env.USER}}
         password-secret: ${{ env.PASS }}
-        
 
-
-    - name: export-solution action
-      uses: microsoft/powerplatform-actions/export-solution@0.4.0
-      with:
-       environment-url: ${{env.ENVIRONMENT_URL}}
-       user-name : ${{env.USER}}
-       password-secret : ${{ env.PASS }}
-       solution-name : ${{ github.event.inputs.solution_name }}
-       solution-output-file : ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
-        
     - name : import-solution action
       uses : microsoft/powerplatform-actions/import-solution@0.4.0
       with:
@@ -70,6 +59,14 @@ jobs:
        solution-file: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
        overwrite-files: true
 
+    - name: export-solution action
+      uses: microsoft/powerplatform-actions/export-solution@0.4.0
+      with:
+       environment-url: ${{env.ENVIRONMENT_URL}}
+       user-name : ${{env.USER}}
+       password-secret : ${{ env.PASS }}
+       solution-name : ${{ github.event.inputs.solution_name }}
+       solution-output-file : ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
     - name: branch-solution, prepare it for a PullRequest
       uses: microsoft/powerplatform-actions/branch-solution@v0
       with:
