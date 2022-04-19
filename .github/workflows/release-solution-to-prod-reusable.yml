@@ -31,23 +31,19 @@ on:
       BUILD_ENVIRONMENT_URL:
         description: 'Build environment url.'
         type: string
-        required: true      
+        required: true
+        default : https://devcicportaldemos.crm4.dynamics.com
+        
       PRODUCTION_ENVIRONMENT_URL: 
         description: 'Production environment url.'
         type: string
         required: true
-      CLIENT_ID: 
-        description: 'The client id'
-        type: string
-        required: true
-      TENANT_ID: 
-        description: 'The tenant id'
-        type: string
-        required: true
-    secrets:
-      envSecret:
-        description: 'The secret value for authentication using SPN'
-        required: true
+        default : https://devcicportaldemos.crm4.dynamics.com
+        
+      secrets :
+        envSecret :
+         description: 'The secret value for authentication using SPN'
+         required: true
 
 jobs:
   convert-to-managed:
