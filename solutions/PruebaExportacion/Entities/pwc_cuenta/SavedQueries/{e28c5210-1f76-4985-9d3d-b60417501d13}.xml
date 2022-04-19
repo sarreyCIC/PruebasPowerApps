@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>1</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{e28c5210-1f76-4985-9d3d-b60417501d13}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="pwc_name" select="1" icon="1" preview="1">
+        <row name="result" id="pwc_cuentaid">
+          <cell name="pwc_name" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>4</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="pwc_cuenta">
+          <attribute name="pwc_cuentaid" />
+          <attribute name="pwc_name" />
+          <attribute name="createdon" />
+          <order attribute="pwc_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="pwc_name" operator="like" value="{0}" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Búsqueda rápida de Cuenta activos" languagecode="3082" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>
