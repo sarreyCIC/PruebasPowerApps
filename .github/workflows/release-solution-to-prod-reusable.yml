@@ -43,3 +43,12 @@ jobs:
         solution-folder: ${{ github.event.inputs.solution_source_folder}}/${{ github.event.inputs.solution_name }}
         solution-file: ${{ github.event.inputs.solution_outbound_folder}}/${{ github.event.inputs.solution_name }}.zip
         solution-type: Unmanaged
+    - name: Import solution as unmanaged to build env
+      uses: microsoft/powerplatform-actions/import-solution@0.4.0
+      with:
+        environment-url: ${{env.ENVIRONMENT_URL}}
+        user-name: ${{env.USER}}
+        password-secret: ${{ env.PASS }}
+        solution-file: ${{ github.event.inputs.solution_outbound_folder}}/${{ github.event.inputs.solution_name }}.zip
+        force-overwrite: true
+        publish-changes: true
