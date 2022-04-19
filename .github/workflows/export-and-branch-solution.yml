@@ -1,6 +1,6 @@
 name: export-and-branch-solution
 # Export solution from DEV environment
-#  unpack it and prepare, commit and push a git branch with the changes
+# unpack it and prepare, commit and push a git branch with the changes
 
 on:
   workflow_dispatch:
@@ -49,23 +49,6 @@ jobs:
         environment-url: ${{env.ENVIRONMENT_URL}}
         user-name: ${{env.USER}}
         password-secret: ${{ env.PASS }}
-        
-    - name: pack Solution
-      uses: microsoft/powerplatform-actions/pack-solution@v0
-      with:
-        solution-file: 'PruebaExportacion-20220419-0945/out/PruebaExportacion.zip'
-        solution-folder: 'PruebaExportacion-20220419-0945/out/'
-        solution-type: 'Unmanaged'
-        overwrite-files: true
-
-    - name : import-solution action
-      uses : microsoft/powerplatform-actions/import-solution@0.4.0
-      with:
-       environment-url: ${{env.ENVIRONMENT_URL}}
-       user-name : ${{env.USER}}
-       password-secret : ${{ env.PASS }}
-       solution-file: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
-       overwrite-files: true
 
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@0.4.0
