@@ -53,8 +53,8 @@ jobs:
     - name: pack Solution
       uses: microsoft/powerplatform-actions/pack-solution@v0
       with:
-        solution-file: 'out/PruebaExportacion.zip'
-        solution-folder: 'out/'
+        solution-file: 'PruebaExportacion-20220419-0945/out/PruebaExportacion.zip'
+        solution-folder: 'PruebaExportacion-20220419-0945/out/'
         solution-type: 'Unmanaged'
         overwrite-files: true
 
