@@ -54,7 +54,7 @@ jobs:
       uses: microsoft/powerplatform-actions/pack-solution@v0
       with:
         solution-file: 'out/PruebaExportacion.zip'
-        solution-folder: 'out/PruebasPowerApps/solutions/PruebaExportacion'
+        solution-folder: 'out/'
         solution-type: 'Unmanaged'
         overwrite-files: true
 
