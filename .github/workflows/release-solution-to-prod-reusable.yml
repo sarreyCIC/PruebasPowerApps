@@ -52,3 +52,26 @@ jobs:
         solution-file: ${{ github.event.inputs.solution_outbound_folder}}/${{ github.event.inputs.solution_name }}.zip
         force-overwrite: true
         publish-changes: true
+    - name: export-solution action
+      uses: microsoft/powerplatform-actions/export-solution@0.4.0
+      with:
+          environment-url: ${{env.ENVIRONMENT_URL}}
+          user-name : ${{env.USER}}
+          password-secret : ${{ env.PASS }}
+          solution-name : ${{ github.event.inputs.solution_name }}
+          solution-output-file : ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
+    - name: unpack-solution action
+      uses: microsoft/powerplatform-actions/unpack-solution@0.4.0
+      with:
+              solution-file: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
+              solution-folder: ${{ github.event.inputs.solution_folder}}/${{ github.event.inputs.solution_name }}
+              solution-type: 'Unmanaged'
+              overwrite-files: true
+
+    - name: branch-solution, prepare it for a PullRequest
+      uses: microsoft/powerplatform-actions/branch-solution@v0
+      with:
+            solution-folder: ${{ github.event.inputs.solution_folder}}/${{ github.event.inputs.solution_name }}
+            solution-target-folder: ${{ github.event.inputs.solution_target_folder}}/${{ github.event.inputs.solution_name }}
+            repo-token: ${{ secrets.GITHUB_TOKEN }}
+            allow-empty-commit: true
