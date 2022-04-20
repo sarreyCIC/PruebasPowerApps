@@ -57,6 +57,4 @@ jobs:
             environment-url: ${{env.ENVIRONMENT_URL}}
             user-name: ${{env.USER}}
             password-secret: ${{ env.PASS }}
-            app-id: ${{env.CLIENT_ID}}
-            client-secret: ${{env.SECRET_ID}}
-            tenant-id: ${{env.TENANT_ID}}
+           
