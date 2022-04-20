@@ -91,7 +91,7 @@ jobs:
             repo-token: ${{ secrets.GITHUB_TOKEN }}
             allow-empty-commit: true
     - name: reset enviroment
-      uses: microsoft/powerplatform-actions/reset-environment@0.4.0
+      uses: microsoft/powerplatform-actions/delete-environment@0.4.0
       with:
             environment-url: ${{env.ENVIRONMENT_URL}}
             app-id: ${{env.CLIENT_ID}}
