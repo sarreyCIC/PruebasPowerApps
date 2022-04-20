@@ -54,8 +54,9 @@ jobs:
       uses: microsoft/powerplatform-actions/who-am-i@0.4.0
       with:
             environment-url: ${{env.ENVIRONMENT_URL}}
-            user-name: ${{env.USER}}
-            password-secret: ${{ env.PASS }}
+            app-id: ${{env.CLIENT_ID}}
+            client-secret: ${{env.SECRET_ID}}
+            tenant-id: ${{env.TENANT_ID}}
     - name: delete-enviroment
       uses: microsoft/powerplatform-actions/delete-environment@0.4.0
       with:
