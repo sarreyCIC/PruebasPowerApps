@@ -36,9 +36,9 @@ env:
   USER : 'admin@cicportaldemos.onmicrosoft.com'
   PASS : 'Cloud123!'
   ENVIRONMENT_URL: 'actualiza.crm4.dynamics.com'
-  CLIENT_ID: '49d2e9c3-cb62-4f96-801a-7dacc4874cca'
-  TENANT_ID: 'bb24ff0d-24a0-4146-851b-761c2ac27b24'
-
+  CLIENT_ID: '7f32dc27-f064-4d8c-ac80-9b6487ed19e9'
+  TENANT_ID: 'a8524762-b02e-4e1b-bd2c-b6b28f50f922'
+  SECRET_ID: 'J.d8Q~ob8DMw3PBavMTb-sSB2B7SYLshSXP0acpt'
 jobs:
   export-from-dev:
     runs-on: windows-latest
@@ -60,6 +60,9 @@ jobs:
       uses: microsoft/powerplatform-actions/import-solution@0.4.0
       with:
         environment-url: ${{env.ENVIRONMENT_URL}}
+        app-id: ${{env.CLIENT_ID}}
+        client-secret: ${{env.SECRET_ID}}
+        tenant-id: ${{env.TENANT_ID}}
         user-name: ${{env.USER}}
         password-secret: ${{ env.PASS }}
         solution-file: ${{ github.event.inputs.solution_outbound_folder}}/${{ github.event.inputs.solution_name }}.zip
@@ -69,8 +72,10 @@ jobs:
       uses: microsoft/powerplatform-actions/export-solution@0.4.0
       with:
             environment-url: ${{env.ENVIRONMENT_URL}}
-            user-name : ${{env.USER}}
-            password-secret : ${{ env.PASS }}
+            app-id: ${{env.CLIENT_ID}}
+            client-secret: ${{env.SECRET_ID}}
+            tenant-id: ${{env.TENANT_ID}}
+            user-name: ${{env.USER}}
             solution-name : ${{ github.event.inputs.solution_name }}
             solution-output-file : ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
     - name: unpack-solution action
@@ -88,3 +93,11 @@ jobs:
             solution-target-folder: ${{ github.event.inputs.solution_target_folder}}/${{ github.event.inputs.solution_name }}
             repo-token: ${{ secrets.GITHUB_TOKEN }}
             allow-empty-commit: true
+    - name: reset enviroment
+      uses: microsoft/powerplatform-actions/reset-environment@0.4.0
+      with:
+            environment-url: ${{env.ENVIRONMENT_URL}}
+            app-id: ${{env.CLIENT_ID}}
+            client-secret: ${{env.SECRET_ID}}
+            tenant-id: ${{env.TENANT_ID}}
+            user-name: ${{env.USER}}
