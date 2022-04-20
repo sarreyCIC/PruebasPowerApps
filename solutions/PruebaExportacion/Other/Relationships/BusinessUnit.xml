@@ -16,7 +16,6 @@
     <RelationshipDescription>
       <Descriptions>
         <Description description="Identificador único de la unidad de negocio propietaria del registro." languagecode="3082" />
-        <Description description="Unique identifier for the business unit that owns the record" languagecode="1033" />
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>

@@ -11,11 +11,9 @@
     <Publisher>
       <UniqueName>pwc</UniqueName>
       <LocalizedNames>
-        <LocalizedName description="PwC" languagecode="1033" />
         <LocalizedName description="PwC" languagecode="3082" />
       </LocalizedNames>
       <Descriptions>
-        <Description description="PwC" languagecode="1033" />
         <Description description="PwC" languagecode="3082" />
       </Descriptions>
       <EMailAddress xsi:nil="true"></EMailAddress>
