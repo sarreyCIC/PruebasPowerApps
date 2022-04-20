@@ -23,7 +23,6 @@
                       <cell id="{3c763b53-df4c-4264-a06d-973e195b7aeb}">
                         <labels>
                           <label description="Nombre" languagecode="3082" />
-                          <label description="Nombre" languagecode="1033" />
                         </labels>
                         <control id="pwc_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="pwc_name" />
                       </cell>
@@ -32,7 +31,6 @@
                       <cell id="{9ea17a52-291b-4f1a-b264-18fd16109a32}">
                         <labels>
                           <label description="Propietario" languagecode="3082" />
-                          <label description="Owner" languagecode="1033" />
                         </labels>
                         <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
                       </cell>
