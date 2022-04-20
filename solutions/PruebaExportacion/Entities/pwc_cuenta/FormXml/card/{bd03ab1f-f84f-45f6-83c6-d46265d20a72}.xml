@@ -25,7 +25,6 @@
               <sections>
                 <section name="CardHeader" showlabel="false" showbar="false" columns="111" id="{91eae481-4e80-4475-891c-37632f51f1c6}" IsUserDefined="0">
                   <labels>
-                    <label description="Header" languagecode="1033" />
                     <label description="Encabezado" languagecode="3082" />
                   </labels>
                   <rows>
@@ -33,7 +32,6 @@
                       <cell id="{bfe7a6db-21ee-457d-b37e-1d3847ea5cd6}" showlabel="true" locklevel="0">
                         <labels>
                           <label description="Razón para el estado" languagecode="3082" />
-                          <label description="Status Reason" languagecode="1033" />
                         </labels>
                         <control id="statuscode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" datafieldname="statuscode" disabled="false" />
                       </cell>
@@ -52,7 +50,6 @@
                 </section>
                 <section name="CardDetails" showlabel="false" showbar="false" columns="1" id="{579e691e-757a-469a-8561-025cfe844c89}" IsUserDefined="0">
                   <labels>
-                    <label description="Details" languagecode="1033" />
                     <label description="Detalles" languagecode="3082" />
                   </labels>
                   <rows>
@@ -60,7 +57,6 @@
                       <cell id="{235040d0-07d8-4891-9bb7-76740a723db7}" showlabel="true" locklevel="0">
                         <labels>
                           <label description="Nombre" languagecode="3082" />
-                          <label description="Nombre" languagecode="1033" />
                         </labels>
                         <control id="pwc_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="pwc_name" disabled="false" />
                       </cell>
@@ -69,7 +65,6 @@
                 </section>
                 <section name="CardFooter" showlabel="false" columns="1111" showbar="false" id="{b272d1bb-3dac-4353-b0dc-6e904313376c}" IsUserDefined="0">
                   <labels>
-                    <label description="Footer" languagecode="1033" />
                     <label description="Pie de página" languagecode="3082" />
                   </labels>
                   <rows>
@@ -77,14 +72,12 @@
                       <cell id="{9b913256-10a6-4330-9214-3faa3efc03c9}" showlabel="true" locklevel="0">
                         <labels>
                           <label description="Propietario" languagecode="3082" />
-                          <label description="Owner" languagecode="1033" />
                         </labels>
                         <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
                       </cell>
                       <cell id="{b31712cb-9f80-461e-bbaa-fc864c278ba1}" showlabel="true" locklevel="0">
                         <labels>
                           <label description="Fecha de creación" languagecode="3082" />
-                          <label description="Created On" languagecode="1033" />
                         </labels>
                         <control id="createdon" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="createdon" disabled="false" />
                       </cell>
