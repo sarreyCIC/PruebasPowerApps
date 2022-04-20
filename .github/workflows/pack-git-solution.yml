@@ -91,6 +91,6 @@ jobs:
     - name: reset enviroment
       uses: microsoft/powerplatform-actions/reset-environment@0.4.0
       with:
-        environment-url: 
+        environment-url: org31faed18.crm4.dynamics.com
         user-name: ${{env.USER}}
         password-secret: ${{ env.PASS }}
