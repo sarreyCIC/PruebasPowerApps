@@ -35,7 +35,7 @@ env:
 #edit your values here
   USER : 'admin@cicportaldemos.onmicrosoft.com'
   PASS : 'Cloud123!'
-  ENVIRONMENT_URL: 'https://actualiza.crm4.dynamics.com'
+  ENVIRONMENT_URL: 'org4f52e117.crm4.dynamics.com'
   CLIENT_ID: '7f32dc27-f064-4d8c-ac80-9b6487ed19e9'
   TENANT_ID: 'a8524762-b02e-4e1b-bd2c-b6b28f50f922'
   SECRET_ID: 'J.d8Q~ob8DMw3PBavMTb-sSB2B7SYLshSXP0acpt'
@@ -96,3 +96,6 @@ jobs:
             environment-url: ${{env.ENVIRONMENT_URL}}
             user-name: ${{env.USER}}
             password-secret: ${{ env.PASS }}
+            app-id: ${{env.CLIENT_ID}}
+            client-secret: ${{env.SECRET_ID}}
+            tenant-id: ${{env.TENANT_ID}}
