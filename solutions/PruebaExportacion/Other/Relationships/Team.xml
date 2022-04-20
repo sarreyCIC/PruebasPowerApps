@@ -16,7 +16,6 @@
     <RelationshipDescription>
       <Descriptions>
         <Description description="Identificador único del equipo propietario del registro." languagecode="3082" />
-        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>

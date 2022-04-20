@@ -16,7 +16,6 @@
     <RelationshipDescription>
       <Descriptions>
         <Description description="Identificador único del usuario que creó el registro." languagecode="3082" />
-        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
@@ -36,7 +35,6 @@
     <RelationshipDescription>
       <Descriptions>
         <Description description="Identificador único del usuario que modificó el registro." languagecode="3082" />
-        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
@@ -56,7 +54,6 @@
     <RelationshipDescription>
       <Descriptions>
         <Description description="Identificador único del usuario propietario del registro." languagecode="3082" />
-        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
       </Descriptions>
     </RelationshipDescription>
   </EntityRelationship>
