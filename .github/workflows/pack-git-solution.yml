@@ -90,11 +90,12 @@ jobs:
             solution-target-folder: ${{ github.event.inputs.solution_target_folder}}/${{ github.event.inputs.solution_name }}
             repo-token: ${{ secrets.GITHUB_TOKEN }}
             allow-empty-commit: true
-    - name: reset enviroment
+    - name: delete-enviroment
       uses: microsoft/powerplatform-actions/delete-environment@0.4.0
       with:
             environment-url: ${{env.ENVIRONMENT_URL}}
             environment: ${{env.ENVIRONMENT_URL}}
+            url: ${{env.ENVIRONMENT_URL}}
             app-id: ${{env.CLIENT_ID}}
             client-secret: ${{env.SECRET_ID}}
             tenant-id: ${{env.TENANT_ID}}
