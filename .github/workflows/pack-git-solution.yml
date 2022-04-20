@@ -94,6 +94,7 @@ jobs:
       uses: microsoft/powerplatform-actions/delete-environment@0.4.0
       with:
             environment-url: ${{env.ENVIRONMENT_URL}}
+            environment: ${{env.ENVIRONMENT_URL}}
             app-id: ${{env.CLIENT_ID}}
             client-secret: ${{env.SECRET_ID}}
             tenant-id: ${{env.TENANT_ID}}
