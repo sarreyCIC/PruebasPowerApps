@@ -56,7 +56,7 @@ jobs:
         environment-url: ${{env.ENVIRONMENT_URL}}
         user-name: ${{env.USER}}
         password-secret: ${{ env.PASS }}
-        name : 'Actualiza_Soluciones'
+        name : 'Prueba'
         region : 'unitedstates'
         type : 'Sandbox'
 
