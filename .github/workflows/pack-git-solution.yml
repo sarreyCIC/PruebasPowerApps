@@ -35,7 +35,7 @@ env:
 #edit your values here
   USER : 'admin@cicportaldemos.onmicrosoft.com'
   PASS : 'Cloud123!'
-  ENVIRONMENT_URL: 'https://devcicportaldemos.crm4.dynamics.com'
+  ENVIRONMENT_URL: 'org31faed18.crm4.dynamics.com'
   CLIENT_ID: '49d2e9c3-cb62-4f96-801a-7dacc4874cca'
   TENANT_ID: 'bb24ff0d-24a0-4146-851b-761c2ac27b24'
 
